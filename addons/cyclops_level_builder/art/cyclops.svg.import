@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://raacwmipabuq"
-path="res://.godot/imported/icon.svg-3540dd99eafb6c4e602e8c59cee418fa.ctex"
+uid="uid://bmbwskudf7ldr"
+path="res://.godot/imported/cyclops.svg-62ab1cb5293c5a489284f34e0c642019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-3540dd99eafb6c4e602e8c59cee418fa.ctex"]
+source_file="res://addons/cyclops_level_builder/art/cyclops.svg"
+dest_files=["res://.godot/imported/cyclops.svg-62ab1cb5293c5a489284f34e0c642019.ctex"]
 
 [params]
 
