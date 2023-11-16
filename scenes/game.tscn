@@ -54,9 +54,9 @@ shape = SubResource("ConcavePolygonShape3D_nkamf")
 mesh = SubResource("PlaneMesh_dplmr")
 skeleton = NodePath("../../..")
 
-[node name="enemy" parent="." node_paths=PackedStringArray("movement_taget") instance=ExtResource("3_ccfub")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99273, 1.90797, -6.32181)
-movement_taget = NodePath("../player")
-
 [node name="player" parent="." instance=ExtResource("3_inyqs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82887, 1.63188, -8.43346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="enemy" parent="." node_paths=PackedStringArray("movement_taget") instance=ExtResource("3_ccfub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
+movement_taget = NodePath("../player")
