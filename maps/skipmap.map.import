@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://dlpf0aa3wvttt"
+path="res://.godot/imported/skipmap.map-65edb5718a22a13cb08680ef893c35e6.tres"
+
+[deps]
+
+source_file="res://maps/skipmap.map"
+dest_files=["res://.godot/imported/skipmap.map-65edb5718a22a13cb08680ef893c35e6.tres"]
+
+[params]
+

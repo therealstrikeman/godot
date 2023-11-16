@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3cpa348vp47a"]
+[gd_scene load_steps=13 format=3 uid="uid://b3cpa348vp47a"]
 
 [ext_resource type="PackedScene" uid="uid://dk3v5f0yfewnp" path="res://scenes/enemy.tscn" id="3_ccfub"]
+[ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="3_drod3"]
 [ext_resource type="PackedScene" uid="uid://dxrntpqii3377" path="res://scenes/player.tscn" id="3_inyqs"]
+[ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="4_weu8r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_45er5"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -28,6 +30,8 @@ data = PackedVector3Array(5, 0, 5, -5, 0, 5, 5, 0, -5, -5, 0, 5, -5, 0, -5, 5, 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dplmr"]
 size = Vector2(10, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3r8c"]
 
 [node name="node" type="Node3D"]
 
@@ -60,3 +64,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="enemy" parent="." node_paths=PackedStringArray("movement_taget") instance=ExtResource("3_ccfub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 0)
 movement_taget = NodePath("../player")
+
+[node name="QodotMap" type="Node3D" parent="."]
+transform = Transform3D(-4.37103e-08, 3.05161e-10, -1, 0.00698126, 0.999976, 0, 0.999976, -0.00698126, -4.37114e-08, -63.4154, -0.922209, 4.32783)
+script = ExtResource("3_drod3")
+map_file = "D:/alber/.godot/actualproject/godot/maps/test range .map"
+entity_fgd = ExtResource("4_weu8r")
+texture_file_extensions = PackedStringArray("png", "jpg", "jpeg", "bmp")
+default_material = SubResource("StandardMaterial3D_d3r8c")
