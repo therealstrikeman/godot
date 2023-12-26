@@ -14,7 +14,7 @@
 [resource]
 script = ExtResource("3_8vw40")
 export_file = false
-trenchbroom_games_folder = "D:/overførsler/TrenchBroom-Win64-v2023.1-Release/games/godot"
+trenchbroom_games_folder = "D:/J.A.C.K/Qodot"
 game_name = "Qodot"
 icon = ExtResource("2_jej4n")
 map_formats = Array[Dictionary]([{
