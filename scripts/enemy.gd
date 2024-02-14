@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
 @export var movement_speed: float = 4.0
-
+# adds the target location 
 @export var movement_taget: CharacterBody3D
 @onready var navigation_agent = $NavigationAgent3D
 
 
 
-
+#calls a new function called actor_setup 
 func _physics_process(_delta):
 	call_deferred("actor_setup")
 	

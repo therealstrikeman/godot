@@ -1,5 +1,5 @@
 extends CharacterBody3D
-
+#added varibles to speed and jump 
 const SPEED = 5
 const JUMP_VELOCITY = 4.5
 
@@ -9,7 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var camera: Camera3D = $Camera3D
 
-
+# added  for jump velocity and gravity and force
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,11 +31,12 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
+	#get the mouse mode and captures it and locks to the center of the screen 
 	move_and_slide()
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE else Input.MOUSE_MODE_VISIBLE
 
-	
+	 #it clamp so the player can not go 360 on the  ya axies 
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * look_sensitivity)
