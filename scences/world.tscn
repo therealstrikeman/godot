@@ -143,4 +143,16 @@ script = ExtResource("7_5wa3i")
 
 [node name="GameTimer" type="Timer" parent="Label"]
 
+[node name="ItemList" type="ItemList" parent="Label"]
+unique_name_in_owner = true
+visible = false
+offset_left = 235.0
+offset_top = 27.0
+offset_right = 994.0
+offset_bottom = 557.0
+allow_search = false
+item_count = 3
+item_0/text = "hfhjfghj"
+item_1/text = "jhjhgjfhj"
+
 [connection signal="hit" from="target" to="Label" method="_on_target_hit"]

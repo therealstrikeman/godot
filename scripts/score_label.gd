@@ -23,4 +23,6 @@ func _on_GameTimer_timeout():
 	
 	if time_left <= 0:
 		$GameTimer.stop()
+		$ItemList.visible = true
 		text += "\nTime's up!"
+		print("hidden")
