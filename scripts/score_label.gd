@@ -1,7 +1,7 @@
 extends Label
 
 var score: int = 0
-var time_left: int = 30
+var time_elapsed: int = 0
 var player_win: bool = false
 
 func _ready():
@@ -11,16 +11,15 @@ func _ready():
 	update_score_display()
 
 func update_score_display():
-	text = "Score: %d\nTime: %d" % [score, time_left]
+	var minutes = time_elapsed / 60
+	var seconds = time_elapsed % 60
+	var time_str = "%02d:%02d" % [minutes, seconds]
+	text = "Score: %d\nTime: %s" % [score, time_str]
 
 func _on_target_hit():
 	score += 1
 	update_score_display()
 
 func _on_GameTimer_timeout():
-	time_left -= 1
+	time_elapsed += 1
 	update_score_display()
-	
-	if time_left <= 0:
-		$GameTimer.stop()
-		text += "\nTime's up!"
