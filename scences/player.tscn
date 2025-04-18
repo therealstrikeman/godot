@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c6f6r6m4vyehs"]
 
-[ext_resource type="Script" uid="uid://w5gm3atfv7sg" path="res://scripts/player.gd" id="1_bl5bv"]
-[ext_resource type="Script" uid="uid://d30edo4r6lu26" path="res://scripts/redticle.gd" id="2_5k50w"]
-[ext_resource type="Script" uid="uid://bicn71akgagb4" path="res://scripts/ray_cast_3d.gd" id="2_nbcde"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_bl5bv"]
+[ext_resource type="Script" path="res://scripts/redticle.gd" id="2_5k50w"]
+[ext_resource type="Script" path="res://scripts/ray_cast_3d.gd" id="2_nbcde"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pc1vt"]
 
