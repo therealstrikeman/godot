@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b51cr4nl26ikb"
-path.s3tc="res://.godot/imported/crate_wood_0056_roughness_4k.png-036513a619cf688363abf5c33a35906e.s3tc.ctex"
+path.s3tc="res://.godot/imported/crate_wood_0056_roughness_4k.png-2974fe53554c09da5e7ad5dd93604c0f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://my models/crate_wood_0056_roughness_4k.png"
-dest_files=["res://.godot/imported/crate_wood_0056_roughness_4k.png-036513a619cf688363abf5c33a35906e.s3tc.ctex"]
+source_file="res://crate_wood_0056_roughness_4k.png"
+dest_files=["res://.godot/imported/crate_wood_0056_roughness_4k.png-2974fe53554c09da5e7ad5dd93604c0f.s3tc.ctex"]
 
 [params]
 
