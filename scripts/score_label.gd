@@ -11,7 +11,7 @@ func _ready():
 	update_score_display()
 
 func update_score_display():
-	var minutes = float(time_elapsed) / 60
+	var minutes = time_elapsed / 60
 	var seconds = time_elapsed % 60
 	var time_str = "%02d:%02d" % [int(minutes), int(seconds)]
 	text = "Score: %d\nTime: %s" % [score, time_str]
@@ -62,7 +62,7 @@ func load_scoreboard():
 				var saved_score = saved_data.get("score", 0)
 				var saved_time = saved_data.get("time_elapsed", 0)
 
-				var minutes = float(time_elapsed) / 60
+				var minutes = floor(time_elapsed / 60)
 				var seconds = int(time_elapsed) % 60
 
 				var time_str = "%02d:%02d" % [minutes, seconds]
