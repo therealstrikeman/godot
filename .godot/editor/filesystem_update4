@@ -1,2 +1,5 @@
 res://scences/world.tscn
-res://scences/player.tscn
+res://scripts/score_label.gd
+res://scences/end_zone.gd
+res://scripts/player.gd
+res://scripts/target.gd

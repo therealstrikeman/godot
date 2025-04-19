@@ -8,10 +8,6 @@ var health = 25
 func _ready():
 	add_to_group("targets")
 
-
-
-
-
 func take_damage(amount: int):
 	health -= amount
 	if health <= 0:
@@ -21,7 +17,3 @@ func take_damage(amount: int):
 
 func _on_death(): 
 	print(_on_death())
-	
-	
-	
-	

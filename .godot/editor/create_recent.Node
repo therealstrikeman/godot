@@ -1,2 +1,6 @@
+CollisionShape3D
+CollisionPolygon3D
+Area2D
+Area3D
 ItemList
 Timer

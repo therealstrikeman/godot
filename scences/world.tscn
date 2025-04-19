@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b37lq3ump3b00"]
+[gd_scene load_steps=24 format=4 uid="uid://b37lq3ump3b00"]
 
 [ext_resource type="PackedScene" uid="uid://c6f6r6m4vyehs" path="res://scences/player.tscn" id="2_mnot1"]
 [ext_resource type="PackedScene" uid="uid://b5vd20p4mf1wy" path="res://scences/target.tscn" id="2_u0afa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://bwjd22klggif6" path="res://textures/default_texture.tres" id="5_87yyk"]
 [ext_resource type="FontFile" uid="uid://ct1v3okeekav3" path="res://Roboto-Bold.ttf" id="6_yaja3"]
 [ext_resource type="Script" uid="uid://dao37v8xrlbv4" path="res://scripts/score_label.gd" id="7_5wa3i"]
+[ext_resource type="Script" uid="uid://dvam6kthf1igm" path="res://scripts/end_zone.gd" id="8_hfnbe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3wkwi"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -68,6 +69,10 @@ points = PackedVector3Array(8, 4, 29, 6, 4, 29, 6, 1, 29, 8, 1, 29, 8, 1, 30, 6,
 default_font = ExtResource("6_yaja3")
 /fonts/Score = ExtResource("6_yaja3")
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xtcbe"]
+height = 0.933105
+radius = 2.00293
+
 [node name="world" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -90,7 +95,7 @@ size = Vector3(1, 3.28607, 5.50928)
 [node name="target" parent="." instance=ExtResource("2_u0afa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50165, 0.993633, -7.28694)
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("2_mnot1")]
+[node name="Player" parent="." instance=ExtResource("2_mnot1")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.49873, 1.22025, -1.3499)
 
 [node name="Spawn" type="Marker3D" parent="."]
@@ -146,13 +151,22 @@ script = ExtResource("7_5wa3i")
 [node name="ItemList" type="ItemList" parent="Label"]
 unique_name_in_owner = true
 visible = false
+layout_mode = 0
 offset_left = 235.0
 offset_top = 27.0
 offset_right = 994.0
 offset_bottom = 557.0
 allow_search = false
-item_count = 3
-item_0/text = "hfhjfghj"
-item_1/text = "jhjhgjfhj"
+
+[node name="EndZone" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0489, 0.484955, -8.76908)
+script = ExtResource("8_hfnbe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EndZone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0156212, 0.536583, 0.362535)
+shape = SubResource("CylinderShape3D_xtcbe")
+debug_color = Color(0.784314, 0, 1, 0.972549)
 
 [connection signal="hit" from="target" to="Label" method="_on_target_hit"]
+[connection signal="body_entered" from="EndZone" to="EndZone" method="_on_body_entered"]
+[connection signal="player_entered_endzone" from="EndZone" to="Label" method="_on_endzone_entered"]
