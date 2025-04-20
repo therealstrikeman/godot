@@ -1,5 +1,4 @@
 res://scences/world.tscn
-res://scripts/score_label.gd
-res://scences/end_zone.gd
-res://scripts/player.gd
-res://scripts/target.gd
+res://addons/func_godot/fgd/func_godot_fgd.tres
+res://addons/func_godot/func_godot_default_map_settings.tres
+res://addons/func_godot/func_godot_local_config.tres

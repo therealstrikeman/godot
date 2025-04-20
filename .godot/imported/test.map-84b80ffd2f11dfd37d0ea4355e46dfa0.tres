@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="QuakeMapFile" load_steps=2 format=3]
 
-[ext_resource type="Script" uid="uid://bhvekpcmei4ok" path="res://addons/func_godot/src/import/quake_map_file.gd" id="1_rwfll"]
+[ext_resource type="Script" path="res://addons/func_godot/src/import/quake_map_file.gd" id="1_rwfll"]
 
 [resource]
 script = ExtResource("1_rwfll")
-revision = 0
+revision = 1
 map_data = "{
 \"classname\" \"worldspawn\"
 \"mapversion\" \"220\"
