@@ -144,6 +144,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 theme = SubResource("Theme_nlwf4")
 text = "Score: 0"
+justification_flags = 171
 script = ExtResource("7_5wa3i")
 
 [node name="GameTimer" type="Timer" parent="Label"]
@@ -157,6 +158,9 @@ offset_top = 27.0
 offset_right = 994.0
 offset_bottom = 557.0
 allow_search = false
+auto_width = true
+max_columns = 3
+same_column_width = true
 
 [node name="EndZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0489, 0.484955, -8.76908)

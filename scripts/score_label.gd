@@ -29,7 +29,6 @@ func _on_endzone_entered():
 	save_score()
 	display_win_message()
 	load_scoreboard()
-	
 
 	
 func save_score():

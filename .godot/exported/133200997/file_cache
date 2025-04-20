@@ -27,7 +27,5 @@ res://entities/light_spot.tscn::f9b4f2f53756e02344f9b8c53b23dd85::1744941554::re
 res://entities/trigger_once.tscn::8d7006de72224f2940fe09cf48f0d235::1744941554::res://.godot/exported/133200997/export-15184931069c3294ea706ab2e3938d41-trigger_once.scn
 res://scences/player.tscn::9b1342f8e15910d330f18a096897b30a::1744942451::res://.godot/exported/133200997/export-222201a058857f0b2e27506cbc6581e0-player.scn
 res://scences/target.tscn::7fb6b5e87cc1a175c21c0ff127074c7f::1744941554::res://.godot/exported/133200997/export-ebadafb9929b0f6ec116cd5dbc2d28f7-target.scn
-res://scences/world.tscn::9710b76dc70ecee1638f6eded91ca47f::1745023461::res://.godot/exported/133200997/export-20f1e79d8d4c5d29469ebf4efad7959c-world.scn
+res://scences/world.tscn::50f3e92431e2143be8e9f5008f271b0f::1745097177::res://.godot/exported/133200997/export-20f1e79d8d4c5d29469ebf4efad7959c-world.scn
 res://textures/special/CLIP.tres::f03516ffb5565cd65fc9114821c95683::1744760729::res://.godot/exported/133200997/export-e4292692756fe2c202ac0180c1b2b768-CLIP.res
-res://textures/default_material.tres::817c7b59ce2feb92c7bf7110b0f9ae64::1744760729::res://.godot/exported/133200997/export-c95bbeb4875671a35e21167c223fb77e-default_material.res
-res://textures/default_texture.tres::3d2488b48bd5494ee500d15039cac068::1744760729::res://.godot/exported/133200997/export-7dc7620c08db203f19f8703196cc5aee-default_texture.res
