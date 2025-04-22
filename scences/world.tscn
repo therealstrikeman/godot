@@ -1,13 +1,12 @@
-[gd_scene load_steps=31 format=4 uid="uid://b37lq3ump3b00"]
+[gd_scene load_steps=30 format=4 uid="uid://b37lq3ump3b00"]
 
 [ext_resource type="PackedScene" uid="uid://c6f6r6m4vyehs" path="res://scences/player.tscn" id="2_mnot1"]
 [ext_resource type="PackedScene" uid="uid://b5vd20p4mf1wy" path="res://scences/target.tscn" id="2_u0afa"]
 [ext_resource type="Script" uid="uid://dcqksgf3psgja" path="res://addons/func_godot/src/map/func_godot_map.gd" id="3_27vbv"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="4_hwluw"]
-[ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://addons/func_godot/textures/default_texture.png" id="5_hfnbe"]
+[ext_resource type="Texture2D" uid="uid://cyg2snr1w5xw5" path="res://textures/default_texture.png" id="5_hfnbe"]
 [ext_resource type="FontFile" uid="uid://ct1v3okeekav3" path="res://Roboto-Bold.ttf" id="6_yaja3"]
 [ext_resource type="Script" uid="uid://dao37v8xrlbv4" path="res://scripts/score_label.gd" id="7_5wa3i"]
-[ext_resource type="Script" uid="uid://dvam6kthf1igm" path="res://scripts/end_zone.gd" id="8_hfnbe"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3wkwi"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -223,7 +222,6 @@ allow_search = false
 
 [node name="EndZone" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0489, 0.484955, -8.76908)
-script = ExtResource("8_hfnbe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EndZone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0156212, 0.536583, 0.362535)
@@ -231,4 +229,3 @@ shape = SubResource("CylinderShape3D_xtcbe")
 
 [connection signal="hit" from="target" to="Label" method="_on_target_hit"]
 [connection signal="body_entered" from="EndZone" to="EndZone" method="_on_body_entered"]
-[connection signal="player_entered_endzone" from="EndZone" to="Label" method="_on_endzone_entered"]
